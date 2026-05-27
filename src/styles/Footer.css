@@ -1,0 +1,240 @@
+/* ===== Footer ===== */
+.footer {
+  width: 100%;
+  background: #1a4f2e;
+  box-sizing: border-box;
+}
+
+/* Main Footer Grid */
+.footer-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 48px;
+  padding: 48px 60px 36px 60px;
+}
+
+/* Brand Column */
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.footer-logo-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-logo-circle {
+  flex-shrink: 0;
+}
+
+.footer-org-name {
+  color: #f5c518;
+  font-size: 1rem;
+  font-weight: 800;
+  font-family: "Noto Serif Bengali", "SolaimanLipi", sans-serif;
+  letter-spacing: 0.02em;
+}
+
+.footer-org-sub {
+  color: #a0c4a0;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  margin-top: 1px;
+}
+
+.footer-desc {
+  color: #b0ccb5;
+  font-size: 0.87rem;
+  font-family: "Noto Serif Bengali", "SolaimanLipi", serif;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.footer-social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  color: white;
+  text-decoration: none;
+  transition: background 0.2s;
+  border: 1.5px solid rgba(255, 255, 255, 0.18);
+}
+
+.footer-social-btn:hover {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+/* Quick Links Column */
+.footer-links-col {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.footer-col-title {
+  color: #f5c518;
+  font-size: 0.97rem;
+  font-weight: 700;
+  font-family: "Noto Serif Bengali", "SolaimanLipi", serif;
+  margin: 0 0 4px 0;
+  letter-spacing: 0.01em;
+}
+
+.footer-links-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.footer-links-list li {
+  margin: 0;
+}
+
+.footer-link {
+  color: #b0ccb5;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-family: "Noto Serif Bengali", "SolaimanLipi", serif;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.2s;
+}
+
+.footer-link:hover {
+  color: #ffffff;
+}
+
+.footer-link-arrow {
+  color: #f5c518;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* Contact Column */
+.footer-contact-col {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.footer-contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.footer-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.footer-contact-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.footer-contact-icon.location { background: #e53935; }
+.footer-contact-icon.phone    { background: #43a047; }
+.footer-contact-icon.email    { background: #1e88e5; }
+.footer-contact-icon.whatsapp { background: #25d366; }
+.footer-contact-icon.clock    { background: #fb8c00; }
+
+.footer-contact-label {
+  color: #f5c518;
+  font-size: 0.72rem;
+  font-weight: 700;
+  font-family: "Noto Serif Bengali", "SolaimanLipi", serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.footer-contact-val {
+  color: #b0ccb5;
+  font-size: 0.83rem;
+  font-family: "Noto Serif Bengali", "SolaimanLipi", serif;
+  line-height: 1.6;
+}
+
+/* Divider Quote */
+.footer-divider-quote {
+  text-align: center;
+  color: #7aab8a;
+  font-size: 0.82rem;
+  font-family: "Noto Serif Bengali", "SolaimanLipi", serif;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 14px 20px;
+  font-style: italic;
+}
+
+/* Bottom Bar */
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 60px;
+  background: #163d24;
+  color: #7a9e82;
+  font-size: 0.8rem;
+  font-family: "Noto Serif Bengali", "SolaimanLipi", serif;
+}
+
+/* Red Bottom Line */
+.footer-red-line {
+  height: 4px;
+  background: linear-gradient(to right, #e53935, #c62828);
+  width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .footer-main {
+    grid-template-columns: 1fr 1fr;
+    padding: 36px 24px 28px 24px;
+    gap: 28px;
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
+
+  .footer-bottom {
+    padding: 12px 24px;
+    flex-direction: column;
+    gap: 6px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-main {
+    grid-template-columns: 1fr;
+    padding: 28px 16px;
+    gap: 24px;
+  }
+}

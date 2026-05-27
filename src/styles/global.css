@@ -1,0 +1,49 @@
+/* ========== GLOBAL STYLES ========== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Hind Siliguri', 'Arial', sans-serif;
+  background-color: #f0f0f0;
+  color: #222;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ========== PAGE WRAPPER ========== */
+.page-wrapper {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}

@@ -1,0 +1,46 @@
+.TeamHeader-section {
+  text-align: center;
+  padding: 48px 20px 32px;
+  
+}
+
+.TeamHeader-badge-wrapper {
+  margin-bottom: 14px;
+}
+
+.TeamHeader-badge {
+  display: inline-block;
+  border: 1.5px solid #2d6a2d;
+  color: #2d6a2d;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 4px 16px;
+  border-radius: 20px;
+  background: transparent;
+  font-family: 'Hind Siliguri', sans-serif;
+}
+
+.TeamHeader-title {
+  font-size: 40px;
+  font-weight: 700;
+  color: #1a4d1a;
+  margin: 0 0 12px 0;
+  font-family: 'Hind Siliguri', sans-serif;
+  line-height: 1.2;
+}
+
+.TeamHeader-subtitle {
+  font-size: 15px;
+  color: #444;
+  margin: 0 0 18px 0;
+  font-family: 'Hind Siliguri', sans-serif;
+  font-weight: 400;
+}
+
+.TeamHeader-divider {
+  width: 50px;
+  height: 3px;
+  background-color: #b8860b;
+  margin: 0 auto;
+  border-radius: 2px;
+}

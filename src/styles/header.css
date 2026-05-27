@@ -1,0 +1,196 @@
+/* ========== HEADER ========== */
+.header {
+  background-color: #1e6b30;
+  background-image:
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 10px,
+      rgba(255, 255, 255, 0.02) 10px,
+      rgba(255, 255, 255, 0.02) 20px
+    );
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 140px;
+  position: relative;
+  overflow: hidden;
+}
+
+.header-logo-section {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  position: relative;
+  z-index: 1;
+}
+
+.header-logo-img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  object-fit: cover;
+  background: #fff;
+}
+
+.header-logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-logo-text h1 {
+  color: #ffffff;
+  font-size: 26px;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.1;
+  font-family: 'Arial', 'Helvetica Neue', sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.header-logo-text p {
+  color: #f5c842;
+  font-size: 14px;
+  margin: 2px 0 0 0;
+  font-family: 'SolaimanLipi', 'Kalpurush', 'Hind Siliguri', sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+}
+
+.header-donate-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #d4a017;
+  color: #1a1a1a;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 10px 22px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-family: 'SolaimanLipi', 'Kalpurush', 'Hind Siliguri', sans-serif;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  text-decoration: none;
+  letter-spacing: 0.3px;
+  position: relative;
+  z-index: 1;
+}
+
+.header-donate-btn:hover {
+  background-color: #c49010;
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+}
+
+.header-donate-btn .donate-icon {
+  font-size: 16px;
+}
+
+/* RESPONSIVE DESIGN */
+
+/* DESKTOP (1024px and above) */
+@media (min-width: 1024px) {
+  .header {
+    padding: 12px 24px;
+    min-height: 140px;
+  }
+
+  .header-logo-section {
+    gap: 14px;
+  }
+
+  .header-logo-img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .header-logo-text h1 {
+    font-size: 26px;
+  }
+
+  .header-logo-text p {
+    font-size: 14px;
+  }
+
+  .header-donate-btn {
+    font-size: 14px;
+    padding: 10px 22px;
+  }
+}
+
+/* TABLET (768px to 1023px) */
+@media (max-width: 1023px) and (min-width: 768px) {
+  .header {
+    padding: 12px 18px;
+    min-height: 120px;
+  }
+
+  .header-logo-section {
+    gap: 12px;
+  }
+
+  .header-logo-img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .header-logo-text h1 {
+    font-size: 22px;
+  }
+
+  .header-logo-text p {
+    font-size: 12px;
+  }
+
+  .header-donate-btn {
+    font-size: 13px;
+    padding: 8px 18px;
+  }
+
+  .header-donate-btn .donate-icon {
+    font-size: 14px;
+  }
+}
+
+/* MOBILE (below 768px) */
+@media (max-width: 767px) {
+  .header {
+    padding: 12px 12px;
+    min-height: auto;
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+
+  .header-logo-section {
+    gap: 10px;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .header-logo-img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .header-logo-text h1 {
+    font-size: 18px;
+  }
+
+  .header-logo-text p {
+    font-size: 11px;
+  }
+
+  .header-donate-btn {
+    font-size: 12px;
+    padding: 7px 14px;
+    margin-top: 4px;
+  }
+
+  .header-donate-btn .donate-icon {
+    font-size: 13px;
+  }
+}

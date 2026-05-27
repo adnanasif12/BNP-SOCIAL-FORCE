@@ -1,0 +1,141 @@
+/* ===== Social Programs Section ===== */
+.social-programs-section {
+  padding: 10px 40px 40px;
+  background-color: #f5f5ef;
+}
+
+/* Section Header */
+.social-programs-section .section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.social-programs-section .section-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  font-family: "Hind Siliguri", "SolaimanLipi", sans-serif;
+}
+
+.social-programs-section .title-bar {
+  display: inline-block;
+  width: 5px;
+  height: 26px;
+  background-color: #1a5e3a;
+  border-radius: 3px;
+}
+
+.social-programs-section .see-all-link {
+  font-size: 0.88rem;
+  color: #333;
+  text-decoration: none;
+  font-family: "Hind Siliguri", "SolaimanLipi", sans-serif;
+  transition: color 0.2s;
+}
+
+.social-programs-section .see-all-link:hover {
+  color: #1a5e3a;
+}
+
+/* Programs List */
+.programs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* Program Item */
+.program-item {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 16px 20px;
+  background-color: #fff;
+  border-radius: 0;
+  border-left: 4px solid transparent;
+  margin-bottom: 2px;
+  transition: box-shadow 0.2s;
+  cursor: pointer;
+}
+
+.program-item:first-child {
+  border-radius: 8px 8px 0 0;
+}
+
+.program-item:last-child {
+  border-radius: 0 0 8px 8px;
+  margin-bottom: 0;
+}
+
+.program-item:only-child {
+  border-radius: 8px;
+}
+
+.program-item:hover {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.07);
+}
+
+/* Border Colors */
+.border-green {
+  border-left-color: #1a5e3a;
+}
+
+.border-yellow {
+  border-left-color: #e0a020;
+}
+
+.border-red {
+  border-left-color: #c0392b;
+}
+
+/* Program Icon */
+.program-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+.icon-bg-green {
+  background-color: #1a5e3a;
+}
+
+.icon-bg-yellow {
+  background-color: #e0a020;
+}
+
+.icon-bg-red {
+  background-color: #c0392b;
+}
+
+/* Program Info */
+.program-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.program-title {
+  font-size: 0.97rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0;
+  font-family: "Hind Siliguri", "SolaimanLipi", sans-serif;
+  line-height: 1.4;
+}
+
+.program-meta {
+  font-size: 0.82rem;
+  color: #777;
+  margin: 0;
+  font-family: "Hind Siliguri", "SolaimanLipi", sans-serif;
+}

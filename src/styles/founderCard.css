@@ -1,0 +1,235 @@
+.founder-card {
+  background: #ffffff;
+  border: 1.5px solid #d4d4d4;
+  border-top: 4px solid #1a4d1a;
+  border-radius: 14px;
+  padding: 28px 30px;
+  margin: 0 20px 30px 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.founder-card-inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+
+.founder-avatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-left: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 3px solid #e0e0e0;
+  overflow: hidden;
+  background-color: #f5f0e8;
+}
+
+.founder-avatar-text {
+  font-size: 26px;
+  font-weight: 700;
+  color: #ffffff;
+  font-family: 'Hind Siliguri', sans-serif;
+}
+
+.founder-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+.founder-badge-wrapper {
+  margin-bottom: 8px;
+}
+
+.founder-info {
+  flex: 1;
+  margin-left: 100px;
+}
+
+.founder-role-badge {
+  display: inline-block;
+  background-color: #c8860a;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 3px 12px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  font-family: 'Hind Siliguri', sans-serif;
+}
+
+.founder-name {
+  font-size: 22px;
+  font-weight: 700;
+  color: #111;
+  margin: 0 0 4px 0;
+  font-family: 'Hind Siliguri', sans-serif;
+}
+
+.founder-designation {
+  font-size: 14px;
+  color: #555;
+  margin: 0 0 10px 0;
+  font-family: 'Hind Siliguri', sans-serif;
+}
+
+.founder-bio {
+  font-size: 14px;
+  color: #333;
+  margin: 0 0 16px 0;
+  font-family: 'Hind Siliguri', sans-serif;
+  line-height: 1.6;
+}
+
+.founder-social-links {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.social-icon-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1.5px solid #ccc;
+  background: #f9f9f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #444;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+/* RESPONSIVE DESIGN */
+
+/* DESKTOP (1024px and above) */
+@media (min-width: 1024px) {
+  .founder-card {
+    padding: 28px 30px;
+    margin: 0 20px 30px 20px;
+  }
+
+  .founder-card-inner {
+    gap: 22px;
+  }
+
+  .founder-avatar {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+/* TABLET (768px to 1023px) */
+@media (max-width: 1023px) and (min-width: 768px) {
+  .founder-card {
+    padding: 24px 24px;
+    margin: 0 15px 25px 15px;
+  }
+
+  .founder-card-inner {
+    gap: 18px;
+  }
+
+  .founder-avatar {
+    width: 160px;
+    height: 160px;
+  }
+
+  .founder-avatar-text {
+    font-size: 22px;
+  }
+
+  .founder-name {
+    font-size: 20px;
+  }
+
+  .founder-designation {
+    font-size: 13px;
+  }
+
+  .founder-bio {
+    font-size: 13px;
+  }
+
+  .social-icon-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 12px;
+  }
+}
+
+/* MOBILE (below 768px) */
+@media (max-width: 767px) {
+  .founder-card {
+    padding: 20px 16px;
+    margin: 0 10px 20px 10px;
+  }
+
+  .founder-card-inner {
+    gap: 16px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .founder-avatar {
+    width: 120px;
+    height: 120px;
+  }
+
+  .founder-avatar-text {
+    font-size: 20px;
+  }
+
+  .founder-info {
+    width: 100%;
+  }
+
+  .founder-name {
+    font-size: 18px;
+  }
+
+  .founder-designation {
+    font-size: 12px;
+  }
+
+  .founder-bio {
+    font-size: 12px;
+  }
+
+  .founder-role-badge {
+    font-size: 11px;
+    padding: 2px 8px;
+  }
+
+  .founder-social-links {
+    justify-content: center;
+  }
+
+  .social-icon-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 12px;
+  }
+}
+
+.social-icon-btn:hover {
+  background: #e8e8e8;
+  border-color: #999;
+}
+
+.social-icon-phone {
+  font-size: 14px;
+  color: #e53e3e;
+}

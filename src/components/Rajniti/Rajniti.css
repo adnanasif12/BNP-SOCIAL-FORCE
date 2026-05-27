@@ -1,0 +1,776 @@
+/* ========================================
+   RAJNITI (জাতীয় রাজনীতি) - CSS
+   BNP Social Force Political Section
+   ======================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap');
+
+.rajniti-root {
+  font-family: 'Hind Siliguri', sans-serif;
+  background: #f5f5f0;
+  min-height: 100vh;
+  color: #1a1a1a;
+}
+
+/* ---- HERO ---- */
+.raj-hero {
+  position: relative;
+  background: linear-gradient(135deg, #0d3d1e 0%, #1a5c2a 40%, #0a2e13 100%);
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.raj-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: url('/images/BNP_SOMA.avif')
+    center top/cover no-repeat;
+  opacity: 0.18;
+}
+
+.raj-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px 32px;
+  text-align: center;
+  color: #fff;
+}
+
+.raj-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 30px;
+  padding: 6px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-bottom: 24px;
+  color: #f0e680;
+  backdrop-filter: blur(8px);
+}
+
+.raj-flag-icon {
+  font-size: 18px;
+}
+
+.raj-hero-title {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 0 0 16px;
+  color: #ffffff;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.4);
+}
+
+.raj-hero-title-highlight {
+  color: #f5c518;
+}
+
+.raj-hero-subtitle {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.82);
+  margin-bottom: 40px;
+  line-height: 1.7;
+}
+
+.raj-hero-stats {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 16px;
+  padding: 20px 40px;
+  display: inline-flex;
+}
+
+.raj-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 30px;
+}
+
+.raj-stat-num {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #f5c518;
+}
+
+.raj-stat-label {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.75);
+  margin-top: 2px;
+}
+
+.raj-stat-divider {
+  width: 1px;
+  height: 40px;
+  background: rgba(255,255,255,0.25);
+}
+
+/* Stars decoration */
+.raj-hero-stars {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.raj-star {
+  position: absolute;
+  color: #c0392b;
+  opacity: 0.7;
+  font-size: 2rem;
+  animation: twinkle 3s ease-in-out infinite;
+}
+
+.raj-star.s1 { top: 12%; left: 8%; font-size: 2.5rem; animation-delay: 0s; }
+.raj-star.s2 { top: 20%; right: 12%; font-size: 3rem; animation-delay: 0.5s; }
+.raj-star.s3 { bottom: 25%; left: 15%; font-size: 1.8rem; animation-delay: 1s; }
+.raj-star.s4 { bottom: 15%; right: 8%; font-size: 2.2rem; animation-delay: 1.5s; }
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.15); }
+}
+
+/* ---- TABS ---- */
+.raj-tabs-wrapper {
+  background: #fff;
+  border-bottom: 3px solid #1a5c2a;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+.raj-tabs {
+  display: flex;
+  gap: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.raj-tab-btn {
+  background: none;
+  border: none;
+  padding: 16px 28px;
+  font-size: 0.95rem;
+  font-family: 'Hind Siliguri', sans-serif;
+  font-weight: 500;
+  color: #555;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -3px;
+  white-space: nowrap;
+  transition: all 0.25s ease;
+}
+
+.raj-tab-btn:hover {
+  color: #1a5c2a;
+  background: #f0f7f2;
+}
+
+.raj-tab-btn.active {
+  color: #1a5c2a;
+  border-bottom-color: #f5c518;
+  font-weight: 700;
+  background: #f0f7f2;
+}
+
+/* ---- CONTAINER ---- */
+.raj-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.raj-main-content {
+  padding-top: 40px;
+  padding-bottom: 60px;
+}
+
+/* ---- SECTION HEADER ---- */
+.raj-section-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.raj-section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0d3d1e;
+  margin: 0 0 10px;
+  position: relative;
+  display: inline-block;
+}
+
+.raj-section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #1a5c2a, #f5c518);
+  border-radius: 2px;
+  margin: 10px auto 0;
+}
+
+.raj-section-sub {
+  color: #666;
+  font-size: 0.95rem;
+  margin: 8px 0 0;
+}
+
+/* ---- NEWS GRID ---- */
+.raj-news-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+}
+
+@media (max-width: 900px) {
+  .raj-news-grid { grid-template-columns: 1fr; }
+}
+
+.raj-news-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.raj-news-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 36px rgba(0,0,0,0.13);
+}
+
+.raj-news-card.featured .raj-news-img {
+  height: 260px;
+}
+
+.raj-news-img-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.raj-news-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.raj-news-card:hover .raj-news-img {
+  transform: scale(1.06);
+}
+
+.raj-news-tag {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.raj-news-tag.important { background: #c0392b; color: #fff; }
+.raj-news-tag.analysis { background: #1a5c2a; color: #fff; }
+.raj-news-tag.youth { background: #f5c518; color: #1a1a1a; }
+
+.raj-news-body {
+  padding: 20px;
+}
+
+.raj-news-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.raj-news-cat {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #1a5c2a;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.raj-news-date {
+  font-size: 0.75rem;
+  color: #888;
+}
+
+.raj-news-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0d3d1e;
+  margin: 0 0 10px;
+  line-height: 1.5;
+}
+
+.raj-news-excerpt {
+  font-size: 0.88rem;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.raj-read-more {
+  background: none;
+  border: none;
+  color: #1a5c2a;
+  font-size: 0.88rem;
+  font-weight: 600;
+  font-family: 'Hind Siliguri', sans-serif;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.2s;
+}
+
+.raj-read-more:hover { color: #f5c518; }
+
+/* ---- AGENDA ---- */
+.raj-agenda-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 36px;
+}
+
+@media (max-width: 900px) {
+  .raj-agenda-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .raj-agenda-grid { grid-template-columns: 1fr; }
+}
+
+.raj-agenda-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 28px 22px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.07);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border-top: 4px solid #1a5c2a;
+}
+
+.raj-agenda-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 32px rgba(26,92,42,0.15);
+}
+
+.raj-agenda-icon {
+  font-size: 2.2rem;
+  margin-bottom: 14px;
+}
+
+.raj-agenda-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0d3d1e;
+  margin: 0 0 10px;
+}
+
+.raj-agenda-desc {
+  font-size: 0.85rem;
+  color: #666;
+  line-height: 1.65;
+}
+
+.raj-agenda-num {
+  position: absolute;
+  bottom: -10px;
+  right: -4px;
+  font-size: 4rem;
+  font-weight: 900;
+  color: rgba(26,92,42,0.06);
+  line-height: 1;
+  user-select: none;
+}
+
+.raj-manifesto-banner {
+  background: linear-gradient(135deg, #0d3d1e, #1a5c2a);
+  border-radius: 16px;
+  padding: 36px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  color: #fff;
+}
+
+@media (max-width: 700px) {
+  .raj-manifesto-banner { flex-direction: column; text-align: center; }
+}
+
+.raj-manifesto-text h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0 0 8px;
+}
+
+.raj-manifesto-text p {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.8);
+  margin: 0;
+  max-width: 500px;
+}
+
+.raj-manifesto-btn {
+  background: #f5c518;
+  color: #1a1a1a;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-size: 0.92rem;
+  font-weight: 700;
+  font-family: 'Hind Siliguri', sans-serif;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.25s, transform 0.2s;
+}
+
+.raj-manifesto-btn:hover {
+  background: #ffe44a;
+  transform: scale(1.04);
+}
+
+/* ---- LEADERS ---- */
+.raj-leaders-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 36px;
+}
+
+@media (max-width: 800px) {
+  .raj-leaders-grid { grid-template-columns: 1fr; }
+}
+
+.raj-leader-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 36px 24px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+  border-bottom: 4px solid #f5c518;
+}
+
+.raj-leader-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 40px rgba(0,0,0,0.14);
+}
+
+.raj-leader-avatar {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 auto 18px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+}
+
+.raj-leader-avatar-img {
+  width: 120px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin: 0 auto 18px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  display: block;
+}
+
+.raj-leader-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0d3d1e;
+  margin: 0 0 6px;
+}
+
+.raj-leader-role {
+  font-size: 0.82rem;
+  color: #1a5c2a;
+  font-weight: 600;
+  background: #e8f5ec;
+  padding: 3px 12px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 14px;
+}
+
+.raj-leader-quote {
+  font-size: 0.88rem;
+  color: #555;
+  font-style: italic;
+  line-height: 1.6;
+  border-left: 3px solid #f5c518;
+  padding-left: 12px;
+  text-align: left;
+  margin: 0;
+}
+
+.raj-party-info {
+  background: linear-gradient(135deg, #f8fdf9, #e8f5ec);
+  border: 1px solid #c8e6cc;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.raj-party-info-inner {
+  padding: 36px 40px;
+}
+
+.raj-party-info-inner h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #0d3d1e;
+  margin: 0 0 12px;
+}
+
+.raj-party-info-inner p {
+  font-size: 0.92rem;
+  color: #444;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.raj-party-features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.raj-party-feature {
+  background: #fff;
+  border: 1px solid #c8e6cc;
+  border-radius: 10px;
+  padding: 10px 16px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #1a5c2a;
+}
+
+/* ---- EVENTS ---- */
+.raj-events-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 36px;
+}
+
+.raj-event-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 3px 14px rgba(0,0,0,0.07);
+  transition: transform 0.25s, box-shadow 0.25s;
+  border-left: 5px solid #1a5c2a;
+}
+
+.raj-event-card:hover {
+  transform: translateX(6px);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.12);
+}
+
+.raj-event-date-box {
+  background: linear-gradient(135deg, #1a5c2a, #0d3d1e);
+  color: #fff;
+  border-radius: 12px;
+  padding: 12px 18px;
+  text-align: center;
+  min-width: 64px;
+  flex-shrink: 0;
+}
+
+.raj-event-day {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.raj-event-month {
+  display: block;
+  font-size: 0.72rem;
+  color: #f5c518;
+  margin-top: 2px;
+  font-weight: 600;
+}
+
+.raj-event-info {
+  flex: 1;
+}
+
+.raj-event-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #0d3d1e;
+  margin: 0 0 6px;
+}
+
+.raj-event-details {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.raj-event-details span {
+  font-size: 0.82rem;
+  color: #666;
+}
+
+.raj-event-btn {
+  background: #f5c518;
+  color: #1a1a1a;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  font-family: 'Hind Siliguri', sans-serif;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.raj-event-btn:hover {
+  background: #ffe44a;
+  transform: scale(1.05);
+}
+
+.raj-join-cta {
+  background: linear-gradient(135deg, #0d3d1e 0%, #1a5c2a 100%);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.raj-join-cta-inner {
+  padding: 40px;
+  text-align: center;
+  color: #fff;
+}
+
+.raj-join-cta-inner h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 12px;
+}
+
+.raj-join-cta-inner p {
+  font-size: 0.92rem;
+  color: rgba(255,255,255,0.82);
+  margin-bottom: 28px;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.7;
+}
+
+.raj-join-btns {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.raj-join-primary {
+  background: #f5c518;
+  color: #1a1a1a;
+  border: none;
+  padding: 13px 28px;
+  border-radius: 30px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  font-family: 'Hind Siliguri', sans-serif;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.raj-join-primary:hover {
+  background: #ffe44a;
+  transform: scale(1.04);
+}
+
+.raj-join-secondary {
+  background: transparent;
+  color: #fff;
+  border: 2px solid rgba(255,255,255,0.5);
+  padding: 13px 28px;
+  border-radius: 30px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  font-family: 'Hind Siliguri', sans-serif;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.raj-join-secondary:hover {
+  border-color: #fff;
+  background: rgba(255,255,255,0.1);
+}
+
+/* ---- TICKER ---- */
+.raj-ticker {
+  background: #c0392b;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  height: 42px;
+}
+
+.raj-ticker-label {
+  background: #0d3d1e;
+  padding: 0 18px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  flex-shrink: 0;
+  letter-spacing: 1px;
+}
+
+.raj-ticker-text {
+  overflow: hidden;
+  flex: 1;
+}
+
+.raj-ticker-text span {
+  display: inline-block;
+  white-space: nowrap;
+  font-size: 0.85rem;
+  animation: tickerScroll 22s linear infinite;
+  padding-left: 20px;
+}
+
+@keyframes tickerScroll {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
