@@ -23,7 +23,7 @@ import LatestNews from './components/LatestNews';
 // @ts-ignore
 import SocialPrograms from './components/SocialPrograms'; 
 // @ts-ignore
-import Footer from './components/footer';
+import Footer from './components/Footer';
 // @ts-ignore
  import DonationSection from './components/DonationSection';
 // @ts-ignore
