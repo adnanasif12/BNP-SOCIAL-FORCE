@@ -1,5 +1,5 @@
 import React from "react";
-import "../Styles/SocialPrograms.css";
+import "../styles/SocialPrograms.css";
 
 const programs = [
   {
