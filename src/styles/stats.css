@@ -54,3 +54,76 @@
   font-weight: 400;
   letter-spacing: 0.3px;
 }
+
+/* RESPONSIVE DESIGN */
+
+/* DESKTOP (1024px and above) */
+@media (min-width: 1024px) {
+  .stats-section {
+    padding: 28px 24px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .stats-item {
+    padding: 16px 24px;
+  }
+
+  .stats-number {
+    font-size: 38px;
+  }
+
+  .stats-label {
+    font-size: 13px;
+  }
+}
+
+/* TABLET (768px to 1023px) */
+@media (max-width: 1023px) and (min-width: 768px) {
+  .stats-section {
+    padding: 24px 20px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .stats-item {
+    padding: 14px 16px;
+  }
+
+  .stats-item:not(:last-child)::after {
+    display: none;
+  }
+
+  .stats-number {
+    font-size: 32px;
+  }
+
+  .stats-label {
+    font-size: 12px;
+  }
+}
+
+/* MOBILE (below 768px) */
+@media (max-width: 767px) {
+  .stats-section {
+    padding: 20px 12px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .stats-item {
+    padding: 12px 10px;
+  }
+
+  .stats-item:not(:last-child)::after {
+    display: none;
+  }
+
+  .stats-number {
+    font-size: 28px;
+  }
+
+  .stats-label {
+    font-size: 11px;
+    margin-bottom: 4px;
+  }
+}

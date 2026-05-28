@@ -42,10 +42,9 @@ const HeroSection = () => {
       {/* Right Logo Aside */}
       <div className="hero-logo-aside">
         <img
-          src="/images/bnp-logo.png"
-          alt="BNP Social Force"
+          src="/images/logo.png"
+          alt="BNP Social Force Logo"
         />
-        <span>BNP<br />SOCIAL FORCE</span>
       </div>
     </section>
   );

@@ -138,3 +138,123 @@
   margin: 0;
   font-family: "Hind Siliguri", "SolaimanLipi", sans-serif;
 }
+
+/* RESPONSIVE DESIGN */
+
+/* DESKTOP (1024px and above) */
+@media (min-width: 1024px) {
+  .latest-news-section {
+    padding: 30px 40px;
+  }
+
+  .news-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+
+  .section-title {
+    font-size: 1.35rem;
+  }
+
+  .card-title {
+    font-size: 0.97rem;
+  }
+}
+
+/* TABLET (768px to 1023px) */
+@media (max-width: 1023px) and (min-width: 768px) {
+  .latest-news-section {
+    padding: 24px 28px;
+  }
+
+  .section-header {
+    margin-bottom: 18px;
+  }
+
+  .section-title {
+    font-size: 1.2rem;
+  }
+
+  .news-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .card-image-area {
+    height: 130px;
+  }
+
+  .card-title {
+    font-size: 0.95rem;
+  }
+
+  .card-date {
+    font-size: 0.78rem;
+  }
+
+  .see-all-link {
+    font-size: 0.85rem;
+  }
+}
+
+/* MOBILE (below 768px) */
+@media (max-width: 767px) {
+  .latest-news-section {
+    padding: 20px 16px;
+  }
+
+  .section-header {
+    margin-bottom: 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .section-title {
+    font-size: 1.1rem;
+  }
+
+  .see-all-link {
+    font-size: 0.82rem;
+  }
+
+  .news-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .news-card {
+    border-radius: 8px;
+  }
+
+  .card-image-area {
+    height: 120px;
+    padding: 10px;
+  }
+
+  .category-badge {
+    font-size: 0.7rem;
+    padding: 2px 8px;
+  }
+
+  .card-body {
+    padding: 12px 14px;
+  }
+
+  .card-title {
+    font-size: 0.92rem;
+    margin: 0 0 5px;
+  }
+
+  .card-date {
+    font-size: 0.75rem;
+  }
+
+  .title-bar {
+    width: 4px;
+    height: 22px;
+  }
+}
