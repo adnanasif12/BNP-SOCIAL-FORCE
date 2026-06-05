@@ -132,6 +132,108 @@
   display: block;
 }
 
+/* ---- RESPONSIVE HERO ---- */
+@media (max-width: 768px) {
+  .soh-hero {
+    min-height: 380px;
+    padding-bottom: 30px;
+  }
+
+  .soh-hero-content {
+    padding: 40px 20px 30px;
+  }
+
+  .soh-hero-title {
+    font-size: clamp(1.5rem, 4vw, 2.4rem);
+    margin-bottom: 12px;
+  }
+
+  .soh-hero-subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 32px;
+    line-height: 1.6;
+  }
+
+  .soh-hero-badge {
+    font-size: 12px;
+    padding: 5px 16px;
+    margin-bottom: 16px;
+  }
+
+  .soh-hero-impact {
+    padding: 16px 10px;
+    gap: 0;
+  }
+
+  .soh-impact-item {
+    padding: 10px 16px;
+  }
+
+  .soh-impact-num {
+    font-size: 1.2rem;
+  }
+
+  .soh-impact-label {
+    font-size: 0.65rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .soh-hero {
+    min-height: 320px;
+    padding-bottom: 20px;
+  }
+
+  .soh-hero-content {
+    padding: 32px 16px 20px;
+    max-width: 100%;
+  }
+
+  .soh-hero-title {
+    font-size: clamp(1.2rem, 5vw, 1.8rem);
+    margin-bottom: 8px;
+    line-height: 1.2;
+  }
+
+  .soh-hero-subtitle {
+    font-size: 0.8rem;
+    margin-bottom: 24px;
+    line-height: 1.5;
+    max-width: 100%;
+  }
+
+  .soh-hero-badge {
+    font-size: 11px;
+    padding: 4px 12px;
+    margin-bottom: 12px;
+    gap: 4px;
+  }
+
+  .soh-hero-impact {
+    display: flex;
+    flex-direction: column;
+    padding: 12px 10px;
+    gap: 8px;
+    max-width: 100%;
+  }
+
+  .soh-impact-item {
+    padding: 8px 0;
+  }
+
+  .soh-impact-icon {
+    font-size: 1.2rem;
+  }
+
+  .soh-impact-num {
+    font-size: 1rem;
+  }
+
+  .soh-impact-label {
+    font-size: 0.6rem;
+  }
+}
+
 /* ---- TABS ---- */
 .soh-tabs-wrapper {
   background: #fff;

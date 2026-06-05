@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Donation.css";
+import { donationsApi } from "../../utils/api";
 
 const donationAmounts = [100, 250, 500, 1000, 2500, 5000];
 
@@ -71,6 +72,8 @@ const DonationPage = () => {
   const [donorPhone, setDonorPhone] = useState("");
   const [donorMessage, setDonorMessage] = useState("");
   const [errors, setErrors] = useState({});
+  const [loading, setLoading] = useState(false);
+  const [transactionId, setTransactionId] = useState("");
 
   const finalAmount = customAmount ? parseInt(customAmount) || 0 : selectedAmount;
 
@@ -84,11 +87,41 @@ const DonationPage = () => {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleDonate = () => {
+  const handleDonate = async () => {
     if (step === 1) {
       setStep(2);
     } else if (step === 2) {
-      if (validate()) setStep(3);
+      if (validate()) {
+        // Save donation to backend
+        setLoading(true);
+        try {
+          const txnId = `TXN${Math.floor(Math.random() * 9000000 + 1000000)}`;
+          const donationData = {
+            donorName,
+            donorPhone,
+            donorMessage,
+            amount: finalAmount,
+            causeId: selectedCause.id,
+            causeName: selectedCause.title,
+            paymentMethod: selectedPayment.label,
+            transactionId: txnId,
+            date: new Date().toISOString(),
+            status: "নিশ্চিত",
+          };
+
+          // Call API
+          const response = await donationsApi.create(donationData);
+          console.log("✅ Donation saved:", response);
+          
+          setTransactionId(txnId);
+          setStep(3);
+        } catch (error) {
+          console.error("❌ Error saving donation:", error);
+          setErrors({ submit: "দান সেভ করতে সমস্যা হয়েছে। পুনরায় চেষ্টা করুন।" });
+        } finally {
+          setLoading(false);
+        }
+      }
     }
   };
 
@@ -326,13 +359,26 @@ const DonationPage = () => {
               </div>
 
               <div className="form-btns">
-                <button className="back-btn" onClick={() => setStep(1)}>
+                <button 
+                  className="back-btn" 
+                  onClick={() => setStep(1)}
+                  disabled={loading}
+                >
                   ← পিছনে
                 </button>
-                <button className="donate-btn" onClick={handleDonate}>
-                  ❤️ দান নিশ্চিত করুন
+                <button 
+                  className="donate-btn" 
+                  onClick={handleDonate}
+                  disabled={loading}
+                >
+                  {loading ? "⏳ সংরক্ষণ করছে..." : "❤️ দান নিশ্চিত করুন"}
                 </button>
               </div>
+              {errors.submit && (
+                <div className="error-alert">
+                  <span>⚠️ {errors.submit}</span>
+                </div>
+              )}
             </div>
           )}
 
@@ -362,7 +408,7 @@ const DonationPage = () => {
               <div className="success-detail">
                 <div className="detail-row">
                   <span>ট্রানজেকশন ID</span>
-                  <span>#TXN{Math.floor(Math.random() * 9000000 + 1000000)}</span>
+                  <span>#{transactionId}</span>
                 </div>
                 <div className="detail-row">
                   <span>পেমেন্ট</span>

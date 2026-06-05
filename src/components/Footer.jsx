@@ -21,11 +21,7 @@ export default function Footer() {
         <div className="footer-brand">
           <div className="footer-logo-row">
             <div className="footer-logo-circle">
-              <svg width="44" height="44" viewBox="0 0 44 44" fill="none">
-                <circle cx="22" cy="22" r="22" fill="#2d6a4f" />
-                <circle cx="22" cy="22" r="18" stroke="#c8a000" strokeWidth="2" fill="none" />
-                <text x="22" y="27" textAnchor="middle" fontSize="13" fill="#c8a000" fontWeight="bold">BNP</text>
-              </svg>
+              <img src="/images/logo.png" alt="BNP Social Force Logo" className="footer-logo-img" />
             </div>
             <div>
               <div className="footer-org-name">BNP Social Force</div>

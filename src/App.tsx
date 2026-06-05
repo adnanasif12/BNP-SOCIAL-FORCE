@@ -40,6 +40,8 @@ import SamajikKarjokrom from './components/SamajikKarjokrom/SamajikKarjokrom';
 import TeamPage from './components/Team/TeamPage';
 // @ts-ignore
 import DonationPage from './components/Donation/DonationPage';
+// @ts-ignore
+import AdminPanel from './backend/components/AdminPanel';
 
 
 function App() {
@@ -114,6 +116,7 @@ function App() {
 
   return (
     <div className="page-wrapper">
+      <AdminPanel />
       <TopBar />
       <Header setActiveSection={setActiveSection} />
       <Navbar activeSection={activeSection} setActiveSection={setActiveSection} />

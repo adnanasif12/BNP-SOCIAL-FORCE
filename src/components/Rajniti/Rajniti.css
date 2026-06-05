@@ -144,6 +144,116 @@
   50% { opacity: 1; transform: scale(1.15); }
 }
 
+/* ---- RESPONSIVE HERO ---- */
+@media (max-width: 768px) {
+  .raj-hero {
+    min-height: 380px;
+    padding: 0;
+  }
+
+  .raj-hero-content {
+    padding: 40px 20px;
+  }
+
+  .raj-hero-title {
+    font-size: clamp(1.5rem, 4vw, 2.4rem);
+    margin-bottom: 12px;
+  }
+
+  .raj-hero-subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 32px;
+  }
+
+  .raj-hero-badge {
+    font-size: 12px;
+    padding: 5px 16px;
+    margin-bottom: 16px;
+  }
+
+  .raj-hero-stats {
+    padding: 16px 24px;
+    gap: 0;
+    flex-wrap: wrap;
+  }
+
+  .raj-stat {
+    padding: 0 20px;
+  }
+
+  .raj-stat-num {
+    font-size: 1.4rem;
+  }
+
+  .raj-stat-label {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .raj-hero {
+    min-height: 320px;
+  }
+
+  .raj-hero-content {
+    padding: 32px 16px;
+    max-width: 100%;
+  }
+
+  .raj-hero-title {
+    font-size: clamp(1.2rem, 5vw, 1.8rem);
+    margin-bottom: 8px;
+    line-height: 1.2;
+  }
+
+  .raj-hero-subtitle {
+    font-size: 0.8rem;
+    margin-bottom: 24px;
+    line-height: 1.5;
+  }
+
+  .raj-hero-badge {
+    font-size: 11px;
+    padding: 4px 12px;
+    margin-bottom: 12px;
+    gap: 4px;
+  }
+
+  .raj-flag-icon {
+    font-size: 14px;
+  }
+
+  .raj-hero-stats {
+    display: flex;
+    flex-direction: column;
+    padding: 12px 16px;
+    gap: 12px;
+    border-radius: 12px;
+  }
+
+  .raj-stat {
+    padding: 8px 0;
+  }
+
+  .raj-stat-num {
+    font-size: 1.2rem;
+  }
+
+  .raj-stat-label {
+    font-size: 0.65rem;
+    margin-top: 1px;
+  }
+
+  .raj-stat-divider {
+    display: none;
+  }
+
+  .raj-star.s1 { top: 8%; left: 5%; font-size: 1.5rem; }
+  .raj-star.s2 { top: 15%; right: 8%; font-size: 1.8rem; }
+  .raj-star.s3 { bottom: 20%; left: 10%; font-size: 1.2rem; }
+  .raj-star.s4 { bottom: 12%; right: 5%; font-size: 1.4rem; }
+}
+
 /* ---- TABS ---- */
 .raj-tabs-wrapper {
   background: #fff;
