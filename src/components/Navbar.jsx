@@ -10,6 +10,7 @@ const navItems = [
   { id: 6, label: 'আমাদের টিম',    icon: '👥', iconClass: 'icon-team',     href: '#', active: false },
   { id: 7, label: 'গ্যালারি',      icon: '🖼️', iconClass: 'icon-gallery',  href: '#', active: false },
   { id: 8, label: 'ডোনেশন',       icon: '🔥', iconClass: 'icon-donation',  href: '#', active: false },
+  { id: 9, label: 'সদস্যপদ',      icon: '📝', iconClass: 'icon-membership', href: '#', active: false },
 ];
 
 const Navbar = ({ activeSection, setActiveSection }) => {

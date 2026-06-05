@@ -41,6 +41,8 @@ import TeamPage from './components/Team/TeamPage';
 // @ts-ignore
 import DonationPage from './components/Donation/DonationPage';
 // @ts-ignore
+import MembershipPage from './components/Membership/MembershipPage';
+// @ts-ignore
 import AdminPanel from './backend/components/AdminPanel';
 
 
@@ -141,6 +143,7 @@ function App() {
       {activeSection === 6 && <TeamPage />}
       {activeSection === 7 && <ImageGallery />}
       {activeSection === 8 && <DonationPage />}
+      {activeSection === 9 && <MembershipPage />}
     </div>
   );
 }
