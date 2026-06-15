@@ -8,11 +8,6 @@
   "outputDirectory": "dist",
   "framework": "vite",
   "devCommand": "npm run dev",
-  "functions": {
-    "src/backend/**/*.js": {
-      "runtime": "nodejs20.x"
-    }
-  },
   "rewrites": [
     {
       "source": "/api/:path*",
