@@ -1,5 +1,5 @@
 import './styles/global.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 // @ts-ignore
 import TopBar from './components/TopBar';
 // @ts-ignore
@@ -48,6 +48,35 @@ import AdminPanel from './backend/components/AdminPanel';
 
 function App() {
   const [activeSection, setActiveSection] = useState(1);
+
+  // Handle URL hash changes
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash.substring(2); // Remove '#/' prefix
+      const sectionMap: { [key: string]: number } = {
+        '': 1,
+        'home': 1,
+        'politics': 2,
+        'help': 3,
+        'development': 4,
+        'social': 5,
+        'team': 6,
+        'gallery': 7,
+        'donation': 8,
+        'membership': 9,
+      };
+      
+      const section = sectionMap[hash] || 1;
+      setActiveSection(section);
+    };
+
+    // Set initial section from URL
+    handleHashChange();
+
+    // Listen for hash changes
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, []);
 
   const founderData = {
     avatarLetter: 'প',

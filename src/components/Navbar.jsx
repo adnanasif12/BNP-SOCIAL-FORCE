@@ -14,6 +14,24 @@ const navItems = [
 ];
 
 const Navbar = ({ activeSection, setActiveSection }) => {
+  const handleNavClick = (id) => {
+    const hashMap = {
+      1: '',
+      2: 'politics',
+      3: 'help',
+      4: 'development',
+      5: 'social',
+      6: 'team',
+      7: 'gallery',
+      8: 'donation',
+      9: 'membership',
+    };
+    
+    const hash = hashMap[id] || '';
+    window.location.hash = hash ? `#/${hash}` : '#/';
+    setActiveSection(id);
+  };
+
   return (
     <nav className="navbar">
       <ul className="navbar-list">
@@ -24,7 +42,7 @@ const Navbar = ({ activeSection, setActiveSection }) => {
               className={`navbar-link ${activeSection === item.id ? 'active' : ''}`}
               onClick={(e) => {
                 e.preventDefault();
-                setActiveSection(item.id);
+                handleNavClick(item.id);
               }}
             >
               <span className={`navbar-icon ${item.iconClass}`}>
