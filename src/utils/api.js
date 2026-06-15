@@ -1,7 +1,13 @@
 // API Request Utility
 import { useEffect, useState } from 'react';
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3002';
+// const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3002';
+
+const API_BASE_URL = typeof window !== 'undefined' 
+  ? window.location.origin 
+  : '';
+
+
 
 // Get token from localStorage
 export const getToken = () => {
