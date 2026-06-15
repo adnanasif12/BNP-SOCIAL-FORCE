@@ -112,6 +112,7 @@ function App() {
       // designation: 'অর্থ সম্পাদক',
       department: 'Admin',
     },
+    
     {
       image: '/images/team/team3.jpg',
       avatarLetter: 'প্র',
