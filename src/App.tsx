@@ -1,4 +1,5 @@
 import './styles/global.css';
+// useEffect
 import { useState, useEffect } from 'react';
 // @ts-ignore
 import TopBar from './components/TopBar';

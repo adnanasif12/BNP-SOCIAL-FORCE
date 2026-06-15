@@ -43,6 +43,7 @@ const Navbar = ({ activeSection, setActiveSection }) => {
               onClick={(e) => {
                 e.preventDefault();
                 handleNavClick(item.id);
+                // handleNavClick
               }}
             >
               <span className={`navbar-icon ${item.iconClass}`}>
