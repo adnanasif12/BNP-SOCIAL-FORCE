@@ -1,4 +1,4 @@
-import { connectDB } from '../config/db.js';
+import { connectDB } from './config/db.js';
 import Donation from '../models/Donation.js';
 
 export default async (req, res) => {
