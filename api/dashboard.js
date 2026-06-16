@@ -1,6 +1,6 @@
-import { connectDB } from '../config/db.js';
-import Member from '../models/Member.js';
-import Donation from '../models/Donation.js';
+import { connectDB } from './config/db.js';
+import Member from './models/Member.js';
+import Donation from './models/Donation.js';
 
 export default async (req, res) => {
   if (req.method !== 'GET') {

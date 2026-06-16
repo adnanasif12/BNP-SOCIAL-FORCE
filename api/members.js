@@ -1,5 +1,5 @@
-import { connectDB } from '../config/db.js';
-import Member from '../models/Member.js';
+import { connectDB } from './config/db.js';
+import Member from './models/Member.js';
 
 export default async (req, res) => {
   try {
