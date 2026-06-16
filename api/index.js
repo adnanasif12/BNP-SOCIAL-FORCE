@@ -35,20 +35,24 @@
 
 
 
-import dbConnect from './config/db.js'; // আপনার ডাটাবেজ কানেকশন ফাইল
-import authHandler from './auth/login.js'; // আপনার অথ বা লগইন হ্যান্ডলার (প্রয়োজন অনুযায়ী পাথ ঠিক করবেন)
+import { connectDB } from './config/db.js'; // {} দিয়ে Named Export ইমপোর্ট করা হলো
+import authHandler from './auth/login.js';
 import donationsHandler from './donations.js';
 import membersHandler from './members.js';
 
 export default async (req, res) => {
-  // ১. প্রথমে ডাটাবেজ কানেক্ট করুন
+  // ১. আপনার আসল ফাংশনটি দিয়ে ডাটাবেজ কানেক্ট করা
   try {
-    await dbConnect();
+    await connectDB();
   } catch (dbError) {
-    return res.status(500).json({ success: false, message: 'Database connection failed', error: dbError.message });
+    return res.status(500).json({ 
+      success: false, 
+      message: 'Database connection failed', 
+      error: dbError.message 
+    });
   }
 
-  // ২. ইউআরএল পাথ চেক করে সঠিক ফাইলে রিকোয়েস্ট পাঠান (Routing)
+  // ২. রিকোয়েস্টের ইউআরএল অনুযায়ী সঠিক ফাইলে পাঠানো (Routing)
   const url = req.url || '';
 
   if (url.startsWith('/api/auth')) {
@@ -63,7 +67,7 @@ export default async (req, res) => {
     return membersHandler(req, res);
   }
 
-  // ৩. যদি কোনো রুট না মেলে এবং মেথড শুধু GET হয়, তবে এপিআই স্ট্যাটাস দেখাবে
+  // ৩. শুধু GET রিকোয়েস্ট আসলে এপিআই স্ট্যাটাস দেখাবে
   if (req.method === 'GET') {
     return res.status(200).json({
       success: true,
@@ -72,6 +76,5 @@ export default async (req, res) => {
     });
   }
 
-  // ৪. অন্য সব মেথডের জন্য এরর
-  return res.status(404).json({ success: false, message: 'Route or method not found' });
+  return res.status(404).json({ success: false, message: 'Route not found' });
 };
