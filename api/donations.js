@@ -132,6 +132,12 @@ export default async (req, res) => {
     res.status(405).json({ success: false, message: 'Method not allowed' });
   } catch (error) {
     console.error('Donation API error:', error);
-    res.status(500).json({ success: false, message: 'Server error', error: error.message });
+    console.error('Error stack:', error.stack);
+    res.status(500).json({ 
+      success: false, 
+      message: 'Server error', 
+      error: error.message,
+      details: process.env.NODE_ENV === 'production' ? undefined : error.stack
+    });
   }
 };
